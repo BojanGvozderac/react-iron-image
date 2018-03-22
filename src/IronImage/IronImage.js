@@ -3,20 +3,22 @@ import './IronImage.css';
 
 class IronImage extends Component {
 
-  constructor(props) {
-    super(props);
-    this.ironImageHd = null;
-  }
+  state = {
+    imageLink: '',
+    fadeClass: ''
+  };
+
 
   componentDidMount() {
-        
     const hdLoaderImg = new Image();
 
-    hdLoaderImg.src = this.props.srcLoaded;
+    hdLoaderImg.src = this.props.src;
 
     hdLoaderImg.onload = () => {
-      this.ironImageHd.setAttribute('style', `background-image: url('${this.props.srcLoaded}')`);
-      this.ironImageHd.classList.add('iron-image-fade-in');
+      this.setState({
+          imageLink: this.props.src,
+          fadeClass: 'iron-image-fade-in'
+      });
     }
 
   };
@@ -24,12 +26,13 @@ class IronImage extends Component {
   render() {
     return (
       <div className="iron-image-container">
-        <div className="iron-image-loaded" ref={imageLoadedElem => this.ironImageHd = imageLoadedElem}></div>
+        <div className={`iron-image-loaded ${this.state.fadeClass}`} style={{
+          backgroundImage: `url('${this.state.imageLink}')`
+        }}></div>
         <div className="iron-image-preload" style={{ backgroundImage: `url('${this.props.srcPreload}')` }}></div>
       </div>
     )
   }
-
 }
 
 export default IronImage;
