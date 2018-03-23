@@ -2,6 +2,20 @@
   "name": "react-iron-image",
   "version": "0.1.0",
   "private": true,
+  "author": "JS Guru International",
+  "license": "MIT",
+  "keywords": [
+    "jsg",
+    "javascript",
+    "image",
+    "browser",
+    "client",
+    "library",
+    "react",
+    "lazy",
+    "loading",
+    "images"
+  ],
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

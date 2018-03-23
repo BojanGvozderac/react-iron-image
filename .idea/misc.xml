@@ -6,6 +6,9 @@
   <component name="ProjectDictionaryState">
     <dictionary name="djordjenikolic" />
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/.eslintrc.js" />
+  </component>
   <component name="VagrantProjectSettings">
     <option name="instanceFolder" value="" />
     <option name="provider" value="" />
