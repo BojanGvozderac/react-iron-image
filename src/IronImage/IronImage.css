@@ -8,7 +8,6 @@
 }
 
 .iron-image-preload {
-  position: absolute;
   z-index: 1;
   top: 0;
   right: 0;
@@ -31,8 +30,6 @@
   height: 100%;
 
   opacity: 0;
-
-  transition: opacity 1s ease;
 }
 
 .iron-image-fade-in {
