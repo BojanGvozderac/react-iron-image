@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './IronImage.css';
 
-const IMAGE_LOAD_FINISHED_CLASS = `iron-image--fade-in`;
+const IMAGE_FADE_IN_CLASS = `iron-image--fade-in`;
 
 class IronImage extends Component {
   state = {
@@ -9,7 +9,7 @@ class IronImage extends Component {
     placeholderStyle: { backgroundImage: `url(${this.props.placeholder})` },
   };
 
-  imageLoadHandler = () => this.setState({ fadeInClass: IMAGE_LOAD_FINISHED_CLASS });
+  imageLoadHandler = () => this.setState({ imageLoadFinishedClass: IMAGE_FADE_IN_CLASS });
 
   render() {
     return (
@@ -18,7 +18,7 @@ class IronImage extends Component {
         style={this.state.placeholderStyle}
       >
         <img
-          className={`iron-image ${this.state.fadeInClass}`}
+          className={`iron-image ${this.state.imageLoadFinishedClass}`}
           alt={this.props.alt}
           src={this.props.src}
           style={this.state.imageStyle}
