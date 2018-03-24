@@ -1,13 +1,15 @@
-.iron-image-container {
+.iron-image__container {
   position: relative;
 
   width: 100%;
   height: 100%;
 
   overflow: hidden;
+
+  background-size: 100% 100%;
 }
 
-.iron-image-preload {
+.iron-image__placeholder {
   z-index: 1;
   top: 0;
   right: 0;
@@ -18,7 +20,7 @@
   height: 100%;
 }
 
-.iron-image-loaded {
+.iron-image {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -30,8 +32,10 @@
   height: 100%;
 
   opacity: 0;
+
+  transition: opacity 1s ease;
 }
 
-.iron-image-fade-in {
+.iron-image--fade-in {
   opacity: 1;
 }

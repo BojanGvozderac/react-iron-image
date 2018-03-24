@@ -3,47 +3,28 @@ import './IronImage.css';
 
 class IronImage extends Component {
   state = {
-    imageLink: '',
-    fadeClass: '',
-    transitionDuration: this.props.transitionDuration || '1s',
-    displayPreload: 'absolute'
+    fadeInClass: ``,
+    placeholderStyle: { backgroundImage: `url(${this.props.placeholder})` },
   };
 
-  handleImageLoad = () => {
-      this.setState({
-          imageLink: this.props.src,
-          fadeClass: 'iron-image-fade-in',
-      });
-      setTimeout(() => {
-        this.setState({
-            displayPreload: 'none'
-        });
-      }, this.state.transitionDuration);
-  };
+  imageLoadHandler = () => this.setState({ fadeInClass: 'iron-image--fade-in' });
 
-    render() {
+  render() {
     return (
-      <div className="iron-image-container">
+      <div
+        className="iron-image__container"
+        style={this.state.placeholderStyle}
+      >
         <img
-             alt={this.props.alt}
-             src={this.props.src}
-             className={`iron-image-loaded ${this.state.fadeClass}`}
-             style={{
-                  transition: `opacity ${this.state.transitionDuration} ease`
-             }}
-             onLoad={this.handleImageLoad}
-        />
-        <img
-             alt={this.props.alt}
-             src={this.props.srcPreload}
-             className="iron-image-preload"
-             style={{
-                 display: this.state.displayPreload
-             }}
+          alt={this.props.alt}
+          src={this.props.src}
+          className={`iron-image ${this.state.fadeInClass}`}
+          style={this.state.imageStyle}
+          onLoad={this.imageLoadHandler}
         />
       </div>
-    )
-  }
+    );
+  };
 }
 
 export default IronImage;
