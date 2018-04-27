@@ -1,4 +1,87 @@
 body {
-  background: #eee;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.app {
+  position: relative;
+
+  height: 400px;
+  margin-top: 25px;
+}
+
+.app-iron-image-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 900px;
+  height: 100%;
+
+  margin: 0 auto;
+  overflow: hidden;
+
+  animation-name: raiseCard;
+  animation-duration: .3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.solitude__image-container {
+  position: relative;
+  z-index: 2;;
+
+  flex: 0 0 280px;
+
+  opacity: 0;
+
+  animation: .5s ease-out forwards showImage;
+  animation-delay: 1.5s;
+}
+
+.solitude__text-container {
+  position: relative;
+  z-index: 1;
+
+  flex: 0 1 auto;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.solitude__title {
+  font-weight: bolder;
+  font-size: 42px;
+
+  transform: translateX(-1200px);
+
+  animation: forwards .7s ease-out textSlideIn;
+  animation-delay: 2s;
+}
+
+.solitude__text-content {
+  font-weight: lighter;
+
+  transform: translateX(-1200px);
+
+  animation: forwards .7s ease-out textSlideIn;
+  animation-delay: 2.5s;
+}
+
+@keyframes raiseCard {
+  to {
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, .2);
+  }
+}
+
+@keyframes showImage {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textSlideIn {
+  to {
+    transform: translateX(0);
+  }
 }

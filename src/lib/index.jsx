@@ -12,9 +12,13 @@ class IronImage extends Component {
       imageLoadFinishedClass: ``,
       placeholderStyle: { backgroundImage: `url(${props.placeholder})` },
     };
+
+    this.imageLoadHandler = this.imageLoadHandler.bind(this);
   }
 
-  imageLoadHandler() { this.setState({ imageLoadFinishedClass: IMAGE_FADE_IN_CLASS }); }
+  imageLoadHandler() {
+    this.setState({ imageLoadFinishedClass: IMAGE_FADE_IN_CLASS });
+  }
 
   render() {
     return (
