@@ -3,7 +3,7 @@
 A simple React component that takes care of async lazy loading of images with sweet fade in animation - inspired by Polymer [IronImage](https://www.webcomponents.org/element/PolymerElements/iron-image)
 
 ## Look at what bad@$$ things you can do with the component
-![bad@$$ demo gif][demo.gif]
+![bad@$$ demo gif](demo.gif)
 
 ## API
 
