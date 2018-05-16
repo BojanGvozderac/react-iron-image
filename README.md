@@ -5,6 +5,34 @@ A simple React component that takes care of async lazy loading of images with sw
 ## Look at what bad@$$ things you can do with the component
 ![bad@$$ demo gif](demo.gif)
 
+## How I'd use the component but you do you baby
+```javascript
+// Dunno what this is but React doesn't work without it... thanks facebook -_-
+import React, { Component } from 'react';
+
+// Import these bad boys B-|
+import IronImage from 'react-image-lazy-load-component';
+import 'react-image-lazy-load-component/build/ironImage.css';
+
+// This is just an example you don't need to actually name it PLACEHOLDER.jpg
+import placeholder from './PLACEHOLDER.jpg';
+
+const imgYouWantToShow = `hd.img.url.dot.net`;
+
+class App extends Component {
+  render() {
+    return (
+      // Wrapper div with className="App" because OCD
+      <div className="App">
+        <IronImage placeholder={placeholder} src={imgYouWantToShow} alt="1998 SEO goes here" />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
 ## API
 
 Prop        | Description
