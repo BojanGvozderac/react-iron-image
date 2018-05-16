@@ -1,6 +1,6 @@
 {
   "name": "react-image-lazy-load-component",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "A simple react component that takes care of async lazy loading of images with sweet fade in animation - inspired by Polymer IronImage",
   "main": "lib/index.js",
   "scripts": {
