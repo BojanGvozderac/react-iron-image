@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from "react-dom";
-import IronImage from "../../lib";
+import IronImage from "../lib";
 import "./styles.css";
 
 import ironImageSolitude from './ironImageSolitude.jpg';
